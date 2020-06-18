@@ -1,0 +1,61 @@
+.App {
+  max-width: 400px;
+  min-height: auto;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  border: 1px;
+  box-shadow:0 10px 15px gray;
+  margin-top: 70px;
+  padding: 15px,50px;
+}
+
+.text {
+  text-align: center;
+}
+
+.margin {
+  margin: 20px 20px 20px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.EXPENSE {
+  margin: 15px 15px;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border: 5px;
+  box-shadow:0 10px 15px gray;
+  color: blueviolet;
+
+}
+.transaction input {
+  width: 85%;
+  padding: 5px 0;
+
+}
+.transaction-list{
+  margin: 0;
+  padding: 20px 20px;
+}
+.transaction-list > li {
+  display: flex;
+  justify-content: space-between;
+  border: 5px;
+  box-shadow:0 10px 15px gray;
+  padding: 10px 5px;
+  margin: 5px 0;
+  background-color: snow;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
