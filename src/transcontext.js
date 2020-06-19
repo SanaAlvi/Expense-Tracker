@@ -14,11 +14,11 @@ export const TransactionProvider = ({children})=> {
     
     function addTransaction(transObj){
         dispatch({
-            type:"ADD TRANSACTION"
+            type:"ADD TRANSACTION",
             payload: {
                 amount: transObj.amount,
                 description:transObj.description
-            }
+            },
         })
     }
     return (
