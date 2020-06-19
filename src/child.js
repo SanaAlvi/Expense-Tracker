@@ -3,9 +3,10 @@ import { TransactionContext } from './transcontext';
 import './App.css';
 
 function child() {
-    let { transactions, addTransaction } = useContext(TransactionContext)
-    let [newDesc, setDesc] = useState("")
-    let [newAmount, setAmount] = useState(0)
+    let { transactions, addTransaction } = useContext(TransactionContext);
+    let [newDesc, setDesc] = useState("");
+    let [newAmount, setAmount] = useState(0);
+    
 
     const handleAddition = (event) => {
         event.preventDefault();
@@ -16,10 +17,11 @@ function child() {
         addTransaction({
             amount: Number(newAmount),
             description: newDesc
-        })
+        });
         setDesc(' ')
         setAmount(0)
     }
+    
     const getIncome = () => {
         let income = 0
         for (var i = 0; i < transactions.length; i++) {
