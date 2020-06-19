@@ -18,7 +18,7 @@ function Child() {
             description: newDesc
         });
         setDesc(' ')
-        setAmount(0)
+        setAmount(' ')
     }
 
     const getIncome = () => {
