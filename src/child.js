@@ -37,16 +37,6 @@ function Child() {
         }
         return expense;
     }
-    
-    <ul className="transaction-list">
-                    {transactions.map((transObj, ind) => {
-                        return (<li key={ind}>
-                            <span>{transObj.description}</span>
-                            <span>$ {transObj.amount}</span>
-                        </li>
-                        )
-                    })}
-                </ul>
 
     return (
         <div className="App">
@@ -59,6 +49,15 @@ function Child() {
             <div>
                 <h3 className="margin">History</h3>
                 <hr />
+                <ul className="transaction-list">
+                    {transactions.map((transObj, ind) => {
+                        return (<li key={ind}>
+                            <span>{transObj.description}</span>
+                            <span>$ {transObj.amount}</span>
+                        </li>
+                        )
+                    })}
+                </ul>
 
                 <h3 className="margin">Add New Transaction</h3>
                 <hr />
