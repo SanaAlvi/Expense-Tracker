@@ -28,7 +28,7 @@ jobs:
         version: 12
 
     - name: Yarn Package Publish
-      uses: luvies/action-yarn-publish@v0.1.1
+      uses: Borales/actions-yarn@v2.1.0
       with:
         cmd: install
         
