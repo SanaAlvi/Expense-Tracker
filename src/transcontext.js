@@ -1,4 +1,4 @@
-import React, { creatcontext, useReducer } from 'react'
+import React, { createContext, useReducer } from 'react'
 import TransactionReducer from './transReducer'
 
 const initailtransaction = [
@@ -7,7 +7,7 @@ const initailtransaction = [
     {amount: -200, description:"camera"}
 ]
 
-export const TransactionContext = creatcontext(initailtransaction)
+export const TransactionContext = createContext(initailtransaction)
 
 export const TransactionProvider = ({children})=> {
     let [state,dispatch] = useReducer(TransactionReducer, initailtransaction)
