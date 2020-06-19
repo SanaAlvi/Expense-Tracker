@@ -2,11 +2,10 @@ import React, { useContext, useState } from 'react';
 import { TransactionContext } from './transcontext';
 import './App.css';
 
-function child() {
+function Child() {
     let { transactions, addTransaction } = useContext(TransactionContext);
     let [newDesc, setDesc] = useState("");
     let [newAmount, setAmount] = useState(0);
-    
 
     const handleAddition = (event) => {
         event.preventDefault();
@@ -21,14 +20,14 @@ function child() {
         setDesc(' ')
         setAmount(0)
     }
-    
+
     const getIncome = () => {
         let income = 0
         for (var i = 0; i < transactions.length; i++) {
             if (transactions[i].amount > 0)
                 income += transactions[i].amount
         }
-        return income
+        return income;
     }
     const getExpense = () => {
         let expense = 0
@@ -36,7 +35,7 @@ function child() {
             if (transactions[i].amount < 0)
                 expense += transactions[i].amount
         }
-        return expense
+        return expense;
     }
     return (
         <div className="App">
@@ -90,4 +89,4 @@ function child() {
     );
 }
 
-export default child;
+export default Child;
