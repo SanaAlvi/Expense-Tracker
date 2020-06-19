@@ -9,6 +9,10 @@ function child() {
 
     const handleAddition = (event) => {
         event.preventDefault();
+        if (Number(newAmount) === 0) {
+            alert("Please enter correct value");
+            return false;
+        }
         addTransaction({
             amount: Number(newAmount),
             description: newDesc
@@ -45,7 +49,7 @@ function child() {
                 <hr />
 
                 <ul className="transaction-list">
-                    {transaction.map((transObj, ind) => {
+                    {transactions.map((transObj, ind) => {
                         return (<li key={ind}>
                             <span>{transObj.description}</span>
                             <span>$ {transObj.amount}</span>
