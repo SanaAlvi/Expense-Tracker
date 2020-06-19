@@ -49,15 +49,6 @@ function Child() {
                 <h3 className="margin">History</h3>
                 <hr />
 
-                <ul className="transaction-list">
-                    {transactions.map((transObj, ind) => {
-                        return (<li key={ind}>
-                            <span>{transObj.description}</span>
-                            <span>$ {transObj.amount}</span>
-                        </li>
-                        )
-                    })}
-                </ul>
                 <h3 className="margin">Add New Transaction</h3>
                 <hr />
 
@@ -72,7 +63,7 @@ function Child() {
                         </p>
                     </label>
                     <label>
-                        <p className="margin">Enter Amount <br />
+                        <p className="margin">Enter Amount <span className="small">(negative for expense)</span><br />
                             <input type="number"
                                 value={newAmount}
                                 placeholder="Amount"
@@ -80,7 +71,6 @@ function Child() {
                                 required />
                         </p>
                     </label>
-                    <br />
 
                     <input type="submit" value="Add Transaction" className="margin" />
                 </form>
