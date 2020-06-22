@@ -16,11 +16,6 @@
 .margin {
   margin: 20px 20px 20px;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .EXPENSE {
   margin: 15px 15px;
@@ -29,9 +24,9 @@
   background-color: white;
   border: 5px;
   box-shadow:0 10px 15px gray;
-  color: blueviolet;
-
+  border-radius: 25px;
 }
+
 .transaction input {
   width: 85%;
   padding: 5px 0;
@@ -56,11 +51,3 @@
   font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
