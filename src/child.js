@@ -43,8 +43,8 @@ function Child() {
             <h2 className="text">Expense Tracker</h2>
             <h3 className="margin">YOUR BALANCE <br /> ${getIncome() - getExpense()} </h3>
             <div className="EXPENSE">
-                <h3>INCOME <br /> <span>${getIncome()}</span></h3>
-                <h3>EXPENSE <br /> <span>${getExpense()}</span> </h3>
+                <h3>INCOME <br /> <span className="income">${getIncome()}</span></h3>
+                <h3>EXPENSE <br /> <span className="expense1">${getExpense()}</span> </h3>
             </div>
             <div>
                 <h3 className="margin">History</h3>
