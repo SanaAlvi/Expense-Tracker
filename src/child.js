@@ -35,16 +35,16 @@ function Child() {
             if (transactions[i].amount < 0)
                 expense += transactions[i].amount
         }
-        return expense;
+        return Math.abs(expense);
     }
 
     return (
         <div className="App">
             <h2 className="text">Expense Tracker</h2>
-            <h3 className="margin">YOUR BALANCE <br /> ${getIncome() + getExpense()} </h3>
+            <h3 className="margin">YOUR BALANCE <br /> ${getIncome() - getExpense()} </h3>
             <div className="EXPENSE">
-                <h3>INCOME <br /> $ {getIncome()}</h3>
-                <h3>EXPENSE <br /> $ {getExpense()}</h3>
+                <h3>INCOME <br /> <span>${getIncome()}</span></h3>
+                <h3>EXPENSE <br /> <span>${getExpense()}</span> </h3>
             </div>
             <div>
                 <h3 className="margin">History</h3>
